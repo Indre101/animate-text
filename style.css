@@ -1,18 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .animation {
-  animation: showText 3s linear 1 forwards;
+  animation: showText 1s cubic-bezier(0, 1.29, 0.21, 0.78) 1 forwards;
   transform-style: preserve-3d;
-  display: inline;
+}
+
+span {
+  display: inline-block;
 }
 
 @keyframes showText {
   0% {
-    transform: translateX(100%) scaleX(-1);
-
+    transform: translateX(100vw) scaleX(-1);
   }
 
   75% {
     transform: translateX(0) scaleX(-1);
-
   }
 
   100% {

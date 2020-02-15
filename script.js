@@ -24,7 +24,10 @@ function startAnimation(element) {
   const spanElement = document.createElement("span")
   spanElement.classList.add("animation")
   spanElement.textContent = element;
-
   spanElement.addEventListener("animationend", addAnoTherLetter)
+  if (element === " ") {
+    sentence.textContent += " ";
+
+  }
   sentence.appendChild(spanElement);
 }
