@@ -1,10 +1,21 @@
 .animation {
-  opacity: 0;
-  animation: showText 5s linear forwards 1;
+  animation: showText 3s linear 1 forwards;
+  transform-style: preserve-3d;
+  display: inline;
 }
 
 @keyframes showText {
+  0% {
+    transform: translateX(100%) scaleX(-1);
+
+  }
+
+  75% {
+    transform: translateX(0) scaleX(-1);
+
+  }
+
   100% {
-    opacity: 1;
+    transform: scaleX(1);
   }
 }
