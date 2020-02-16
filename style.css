@@ -2,10 +2,38 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: fantasy, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  --length: 1;
+  width: calc((4 * var(--length)) * 1.3vw);
+  font-size: 4vw;
+}
+
+.rotateElment {
+  animation: rotateElement 1s linear 1 forwards;
+  transform-origin: bottom center;
+}
+
+@keyframes rotateElement {
+  100% {
+    transform: rotateY(-180deg);
+    text-transform: lowercase;
+  }
 }
 
 .animation {
-  animation: showText 1s cubic-bezier(0, 1.29, 0.21, 0.78) 1 forwards;
+  animation: showText 1s cubic-bezier(0.02, 0.73, 1, 0.81) 1 forwards;
   transform-style: preserve-3d;
 }
 
@@ -26,3 +54,6 @@ span {
     transform: scaleX(1);
   }
 }
+
+/* @keyframes changeColor {
+} */
