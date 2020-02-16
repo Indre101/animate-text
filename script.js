@@ -17,7 +17,7 @@ function showText() {
 }
 showText()
 
-const b = () => Math.floor(Math.random() * 5 + 1)
+const b = () => Math.floor(Math.random() * 5)
 
 function addAnoTherLetter() {
   counter++;

@@ -1,8 +1,14 @@
+/* @import url("https://fonts.googleapis.com/css?family=Lacquer&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: fantasy, sans-serif;
+  font-family: "Annie Use Your Telescope", cursive;
 }
 
 body {
@@ -16,24 +22,26 @@ body {
 
 .container {
   --length: 1;
-
   width: calc((4 * var(--length)) * 1.3vw);
   font-size: 4vw;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .rotateElment {
   animation: rotateElement 1s linear 1 forwards;
-  transform-origin: bottom center;
+  transform-style: preserve-3d;
 }
 
 .animation {
   animation: showText 1s cubic-bezier(0.02, 0.73, 1, 0.81) 1 forwards;
-
   transform-style: preserve-3d;
 }
 
 span {
   display: inline-block;
+  transform-origin: center;
   --delay: 1;
 }
 
