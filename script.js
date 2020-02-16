@@ -1,8 +1,6 @@
 const sentence = document.querySelector("h1");
 document.querySelector(".container").style.setProperty("--length", (sentence.textContent).length)
 
-
-
 function getTheCharacters() {
   let characters = (sentence.textContent).split("");
   sentence.textContent = "";
@@ -17,7 +15,7 @@ function showText() {
 }
 showText()
 
-const b = () => Math.floor(Math.random() * 5)
+const ranDelay = () => Math.floor((Math.random() * 5) + 0.5)
 
 function addAnoTherLetter() {
   counter++;
@@ -25,13 +23,9 @@ function addAnoTherLetter() {
     showText()
   } else {
     sentence.classList.add("rotateElment");
-    let a = sentence.textContent;
-    // sentence.textContent = `${a.charAt(0).toLowerCase()}${a.substring(1, a.length - 1)}${a.charAt(a.length - 1).toUpperCase()}`
-
     document.querySelectorAll("span").forEach(e => {
-
       e.classList.remove("animation")
-      e.style.setProperty("--delay", b())
+      e.style.setProperty("--delay", ranDelay())
       e.classList.add("rotateAndColor")
     })
   }

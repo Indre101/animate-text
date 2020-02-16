@@ -1,14 +1,13 @@
-/* @import url("https://fonts.googleapis.com/css?family=Lacquer&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap"); */
-@import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap");
+@font-face {
+  font-family: "ForbidNothing";
+  src: url("./ForbidNothing.otf");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Annie Use Your Telescope", cursive;
+  font-family: "ForbidNothing";
 }
 
 body {
@@ -22,8 +21,8 @@ body {
 
 .container {
   --length: 1;
-  width: calc((4 * var(--length)) * 1.3vw);
-  font-size: 4vw;
+  --font-size-text: 5;
+  width: calc((var(--font-size-text) * var(--length) + 1) * 1vw);
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -40,9 +39,11 @@ body {
 }
 
 span {
+  --delay: 1;
   display: inline-block;
   transform-origin: center;
-  --delay: 1;
+  font-size: calc(var(--font-size-text) * 1vw);
+  margin: 0 1vw;
 }
 
 .rotateAndColor {
