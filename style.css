@@ -16,6 +16,8 @@ body {
 
 .container {
   --length: 1;
+  --delay: 1;
+
   width: calc((4 * var(--length)) * 1.3vw);
   font-size: 4vw;
 }
@@ -25,20 +27,26 @@ body {
   transform-origin: bottom center;
 }
 
+.animation {
+  animation: showText 1s cubic-bezier(0.02, 0.73, 1, 0.81) 1 forwards;
+
+  transform-style: preserve-3d;
+}
+
+.rotateAndColor {
+  animation: rotateElement 1s linear 1 forwards,
+    changeColor 1s calc(var(--delay) * 1s) linear 1 forwards;
+}
+
+span {
+  display: inline-block;
+}
+
 @keyframes rotateElement {
   100% {
     transform: rotateY(-180deg);
     text-transform: lowercase;
   }
-}
-
-.animation {
-  animation: showText 1s cubic-bezier(0.02, 0.73, 1, 0.81) 1 forwards;
-  transform-style: preserve-3d;
-}
-
-span {
-  display: inline-block;
 }
 
 @keyframes showText {
@@ -55,5 +63,8 @@ span {
   }
 }
 
-/* @keyframes changeColor {
-} */
+@keyframes changeColor {
+  100% {
+    color: red;
+  }
+}
