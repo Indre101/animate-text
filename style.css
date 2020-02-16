@@ -16,7 +16,6 @@ body {
 
 .container {
   --length: 1;
-  --delay: 1;
 
   width: calc((4 * var(--length)) * 1.3vw);
   font-size: 4vw;
@@ -33,13 +32,14 @@ body {
   transform-style: preserve-3d;
 }
 
+span {
+  display: inline-block;
+  --delay: 1;
+}
+
 .rotateAndColor {
   animation: rotateElement 1s linear 1 forwards,
     changeColor 1s calc(var(--delay) * 1s) linear 1 forwards;
-}
-
-span {
-  display: inline-block;
 }
 
 @keyframes rotateElement {

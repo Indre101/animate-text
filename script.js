@@ -29,10 +29,9 @@ function addAnoTherLetter() {
     // sentence.textContent = `${a.charAt(0).toLowerCase()}${a.substring(1, a.length - 1)}${a.charAt(a.length - 1).toUpperCase()}`
 
     document.querySelectorAll("span").forEach(e => {
+
       e.classList.remove("animation")
       e.style.setProperty("--delay", b())
-      let c = getComputedStyle(document.querySelector(".container")).getPropertyValue("--delay");
-
       e.classList.add("rotateAndColor")
     })
   }
